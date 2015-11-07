@@ -1,2 +1,31 @@
 * ydl
+
 Monitors a folder for files containing a URL to a YouTube video, extracting the audio
+
+** Background
+
+There are a lot of nice talks and seminars on YouTube that I want to listen to when I 
+ride my bike to work. However, Google does not make this easy since they do not yet allow 
+you to listen to YouTube videos in the background. Then I got the idea that Emacs could help
+me download the videos and extract the audio in some way. I knew there were the nice Python 
+package youtube-dl that could do the hard work for me. I just needed to automate the process
+somehow. This package is the solution.
+
+** How it works
+
+The process is quite simple:
+
+1. I open up a YouTube video in my web browser.
+2. I drag and drop the URL from the browser to a certain folder on my PC. This creates
+   a .url file with a URL in it.
+3. Emacs/ydl monitors the folder and notice the new file and uses the youtube-dl program
+   to create a mp3 file from it.
+4. Once the mp3 file is ready, some id3 tags are added to it, and the file is moved into a folder
+   in my mp3 collection.
+5. From here, Google Music syncs the new mp3 file to my Google Music account.
+6. Some minutes later I have a fresh talk to listen to from my mobile phone.
+
+
+
+
+
