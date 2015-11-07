@@ -17,7 +17,7 @@ The process is quite simple:
 
 1. I open up a YouTube video in my web browser.
 2. I drag and drop the URL from the browser to a certain folder on my PC. This creates
-   a .url file with a URL in it.
+   a .url file with a URL in it. I lean back and relax.
 3. Emacs/ydl monitors the folder and notice the new file and uses the youtube-dl program
    to create a mp3 file from it.
 4. Once the mp3 file is ready, some id3 tags are added to it, and the file is moved into a folder
@@ -25,7 +25,10 @@ The process is quite simple:
 5. From here, Google Music syncs the new mp3 file to my Google Music account.
 6. Some minutes later I have a fresh talk to listen to from my mobile phone.
 
+Of course, step 5 is optional and does not have much to do with this package, but it is part
+of my process.
 
+To be continued...
 
 
 
