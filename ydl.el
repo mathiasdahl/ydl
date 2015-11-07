@@ -65,24 +65,6 @@ necessary actions to move files around."
   (format "ydl-%d"
           (setq ydl-process-count (1+ ydl-process-count))))
 
-;; (defun ydl (file)
-;;   (let* ((process-name (ydl-get-process-name))
-;;          (buffer-name (format "*%s*" process-name))
-;;          (default-directory (file-name-as-directory (ydl-inprogress-folder)))
-;;          (url (ydl-get-url-from-file file))
-;;          (process-symbol (intern process-name)))
-;;     (if url
-;;         (progn
-;;           (set-buffer (get-buffer-create buffer-name))
-;;           (erase-buffer)
-;;           (set 'process-symbol
-;;                (start-process process-name buffer-name
-;;                               "youtube-dl"
-;;                               url "-x" "--audio-format" "mp3"))
-;;           (process-put process-symbol :urlfile file)
-;;           (set-process-sentinel process-symbol 'ydl-sentinel))
-;;       (ydl-move-file file 'error))))
-
 (defun ydl (file)
   "Download and extract audio from YouTube URL found in FILE.
 Creates a new process which is handled by a sentinel that manages
